@@ -9,7 +9,31 @@ import {
 } from "./types";
 import { generateId } from "./utilities";
 
-(function () {
+SIS((client) => {
+  client.requestLogin("foo", "oof");
+  client.requestPayload();
+
+  client.getCourseById("math").createAssignment("New Assignment", {
+    pointsPossible: 16,
+    dueDateTime: "some date",
+  } as AssignmentDetails);
+
+  client
+    .getCourseById("math")
+    .getAssignmentsByName("New Assignment")[0]
+    .createRecord("jacob", {
+      pointsEarned: 16,
+      submittedDateTime: "some date",
+      status: AssignmentRecordStatus.Assigned,
+    } as AssignmentRecordDetails);
+
+  console.log(
+    client.getCourseById("math").getAssignmentsByName("New Assignment")[0]
+      .records
+  );
+});
+
+function SIS(callback) {
   const client = {
     students: [],
     pendingStudents: [],
@@ -169,25 +193,5 @@ import { generateId } from "./utilities";
     };
   }
 
-  client.requestLogin("foo", "oof");
-  client.requestPayload();
-
-  client.getCourseById("math").createAssignment("New Assignment", {
-    pointsPossible: 16,
-    dueDateTime: "some date",
-  } as AssignmentDetails);
-
-  client
-    .getCourseById("math")
-    .getAssignmentsByName("New Assignment")[0]
-    .createRecord("jacob", {
-      pointsEarned: 16,
-      submittedDateTime: "some date",
-      status: AssignmentRecordStatus.Assigned,
-    } as AssignmentRecordDetails);
-
-  console.log(
-    client.getCourseById("math").getAssignmentsByName("New Assignment")[0]
-      .records
-  );
-})();
+  callback(client);
+}
