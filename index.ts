@@ -9,7 +9,9 @@ import {
 } from "./types";
 import { generateId } from "./utilities";
 
-SIS((client) => {
+type client = ReturnType<typeof SIS>;
+
+SIS((client: client) => {
   client.requestLogin("foo", "oof");
   client.requestPayload();
 
@@ -194,4 +196,5 @@ function SIS(callback) {
   }
 
   callback(client);
+  return client;
 }
