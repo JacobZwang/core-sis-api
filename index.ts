@@ -9,9 +9,7 @@ import {
 } from "./types";
 import { generateId } from "./utilities";
 
-type client = ReturnType<typeof SIS>;
-
-SIS((client: client) => {
+SIS((client: ReturnType<typeof SIS>) => {
   client.requestLogin("foo", "oof");
   client.requestPayload();
 
