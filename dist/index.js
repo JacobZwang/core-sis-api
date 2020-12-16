@@ -1,24 +1,6 @@
-define(["require", "exports", "./pseudoPayload", "./types", "./utilities"], function (require, exports, pseudoPayload_1, types_1, utilities_1) {
+define(["require", "exports", "./pseudoPayload", "./utilities"], function (require, exports, pseudoPayload_1, utilities_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    SIS((client) => {
-        client.requestLogin("foo", "oof");
-        client.requestPayload();
-        client.getCourseById("math").createAssignment("New Assignment", {
-            pointsPossible: 16,
-            dueDateTime: "some date",
-        });
-        client
-            .getCourseById("math")
-            .getAssignmentsByName("New Assignment")[0]
-            .createRecord("jacob", {
-            pointsEarned: 16,
-            submittedDateTime: "some date",
-            status: types_1.AssignmentRecordStatus.Assigned,
-        });
-        console.log(client.getCourseById("math").getAssignmentsByName("New Assignment")[0]
-            .records);
-    });
     function SIS(callback) {
         const client = {
             students: [],
@@ -133,4 +115,5 @@ define(["require", "exports", "./pseudoPayload", "./types", "./utilities"], func
         callback(client);
         return client;
     }
+    exports.default = SIS;
 });

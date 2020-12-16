@@ -4,5 +4,6 @@
     "module": "AMD",
     "declaration": true,
     "outDir": "./dist"
-  }
+  },
+  "include": ["lib/**/*"]
 }

@@ -1,7 +1,7 @@
 {
   "name": "core-sis-api",
   "version": "1.0.0",
-  "description": "use in `.js` files ```js SIS((client) => {   // content here }); ```",
+  "description": "student information system api for creating and editing courses, assignments and records",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
