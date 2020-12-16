@@ -33,7 +33,7 @@ SIS((client: ReturnType<typeof SIS>) => {
   client.requestLogin("username", "password");
   client.requestPayload();
 
-  client.getCourseById("math").createAssignment("Assignment Name", {
+  client.getCourseById("courseId").createAssignment("Assignment Name", {
     pointsPossible: 16,
     dueDateTime: "some date",
   } as AssignmentDetails);
@@ -48,7 +48,7 @@ SIS((client: ReturnType<typeof SIS>) => {
     } as AssignmentRecordDetails);
 
   console.log(
-    client.getCourseById("math").getAssignmentsByName("New Assignment")[0]
+    client.getCourseById("courseId").getAssignmentsByName("Assignment Name")[0]
       .records
   );
 });
