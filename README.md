@@ -1,20 +1,25 @@
-### :warning: WARNING: not ready for use, this project is in early development
+> :warning: not ready for use, this project is in early development
 
-## student information system API for creating and editing courses, and viewing assignments, and records
+### student information system API for creating, editing, and viewing courses, assignments, and records
 
-### Install
+#### install
 ```
 npm install git+https://github.com/JacobZwang/core-sis-api.git
 ```
 
-### use in `.js` files
+#### import
+```ts
+import SIS from "core-sis-api";
+```
+
+#### use in `.js` files
 ```js
 SIS((client) => {
   // content here
 });
 ```
 
-### use in `.ts` files
+#### use in `.ts` files
 ```ts
 SIS((client: ReturnType<typeof SIS>) => {
   // content here
@@ -22,7 +27,7 @@ SIS((client: ReturnType<typeof SIS>) => {
 ```
 
 
-### example usage in typescirpt
+#### example usage in typescirpt
 ```ts
 SIS((client: ReturnType<typeof SIS>) => {
   client.requestLogin("username", "password");
