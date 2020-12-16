@@ -12,6 +12,7 @@ function SIS(callback) {
         pendingAssignments: [],
         courses: [],
         pendingCourses: [],
+        githubActionTest: "does it work?",
         requestLogin(userName, password) {
             return { loginStatus: "success" };
         },

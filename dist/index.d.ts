@@ -8,6 +8,7 @@ export default function SIS(callback: any): {
     pendingAssignments: any[];
     courses: any[];
     pendingCourses: any[];
+    githubActionTest: string;
     requestLogin(userName: string, password: string): {
         loginStatus: string;
     };
