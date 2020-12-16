@@ -1,0 +1,23 @@
+{
+  "name": "core-sis-api",
+  "version": "1.0.0",
+  "description": "use in `.js` files ```js SIS((client) => {   // content here }); ```",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobzwang/core-sis-api.git"
+  },
+  "author": "Jacob Zwang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobzwang/core-sis-api/issues"
+  },
+  "devDependencies": {
+    "typescript": "^2.5.3"
+  },
+  "homepage": "https://github.com/jacobzwang/core-sis-api#readme"
+}
