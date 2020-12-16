@@ -23,6 +23,8 @@ export default function SIS(callback) {
     courses: [],
     pendingCourses: [],
 
+    githubActionTest: "does it work?",
+
     requestLogin(userName: string, password: string) {
       return { loginStatus: "success" };
     },
