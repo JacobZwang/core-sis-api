@@ -1,14 +1,20 @@
-# core-sis-api
-### student information system api for creating and editing courses, assignments and records
+### :warning: WARNING: not ready for use, this project is in early development
 
-use in `.js` files
+## student information system API for creating and editing courses, and viewing assignments, and records
+
+### Install
+```
+npm install git+https://github.com/JacobZwang/core-sis-api.git
+```
+
+### use in `.js` files
 ```js
 SIS((client) => {
   // content here
 });
 ```
 
-use in `.ts` files
+### use in `.ts` files
 ```ts
 SIS((client: ReturnType<typeof SIS>) => {
   // content here
